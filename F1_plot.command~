@@ -1,0 +1,35 @@
+#set terminal pngcairo size 400,262.5 enhanced font 'Verdana,10'
+#set output 'camera_classification.png'
+
+set terminal postscript eps size 3.9,2.62 enhanced color \
+    font 'Helvetica,20' linewidth 2
+set output 'camera_classification.eps'
+set xlabel "Training Size"
+set ylabel "F1 measure"
+set title "classification comparison on Camera dataset"                                                                       
+plot "camera_pros.csv" using 1:2 title "ASUM" with linespoints ,"camera_pros.csv" using 1:3 title "HTSM" with linespoints, "camera_pros.csv" using 1:4 title "JST" with linespoints
+
+set terminal postscript eps size 3.9,2.62 enhanced color \
+    font 'Helvetica,20' linewidth 2
+set output 'tablet_classification.eps'
+set xlabel "Training Size"
+set ylabel "F1 measure"
+set title "classification comparison on Phone dataset"                                                                          
+plot "camera_pros.csv" using 1:2 title "ASUM" with linespoints ,"camera_pros.csv" using 1:3 title "HTSM" with linespoints, "camera_pros.csv" using 1:4 title "JST" with linespoints
+
+set terminal postscript eps size 3.9,2.62 enhanced color \
+    font 'Helvetica,20' linewidth 2
+set output 'phone_classification.eps'
+set xlabel "Training Size"
+set ylabel "F1 measure"
+set title "classification comparison on Tablet dataset"                                                                       
+plot "camera_pros.csv" using 1:2 title "ASUM" with linespoints ,"camera_pros.csv" using 1:3 title "HTSM" with linespoints, "camera_pros.csv" using 1:4 title "JST" with linespoints
+
+set terminal postscript eps size 3.9,2.62 enhanced color \
+    font 'Helvetica,20' linewidth 2
+set output 'tv_classification.eps'
+set xlabel "Training Size"
+set ylabel "F1 measure"
+set title "classification comparison on Tv dataset"                                                                        
+plot "camera_pros.csv" using 1:2 title "ASUM" with linespoints ,"camera_pros.csv" using 1:3 title "HTSM" with linespoints, "camera_pros.csv" using 1:4 title "JST" with linespoints
+
